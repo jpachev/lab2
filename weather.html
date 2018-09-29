@@ -6,7 +6,6 @@
 <script
   src="http://code.jquery.com/jquery-3.2.1.min.js">
 </script>
-<script type="text/javascript" src="moviequiz.js"></script>
 <script>
 $(document).ready(function() {
 $( "#cityField" ).keyup(function() {
@@ -33,6 +32,11 @@ $.getJSON(url,function(data) {
 
 </head>
 <body>
+  
+<div class="wrapper"> 
+<h>WEATHER SEARCH</h>  
+<div class="weather-panel"> 
+<div class="left-pane">
 <form>
 Enter A Utah City: <input type="text" id="cityField" value=""><br>
 Suggestion: <span id="txtHint">Empty</span>
@@ -40,9 +44,21 @@ Suggestion: <span id="txtHint">Empty</span>
 </form>
 <p>City</p>
 <textarea id="displayCity">No City</textarea>
+</div>
+<div class="right-pane">
 <p>Current Weather</p>
 <div id="weather">No weather</div>
-
+</div>
+</div>
+<h>Stack Exchange Search</h>
+<div class="search-panel">
+<form>
+  Enter A Search Term: <input type="text" id="searchField" value="">
+  <input id="searchButton" type="submit" value="Submit">
+</form>
+<p id="search"> </p>
+</div>
+</div> 
 <script>
   $("#weatherButton").click(function(e){
   var value = $("#cityField").val();
@@ -65,24 +81,19 @@ Suggestion: <span id="txtHint">Empty</span>
             var temp_max = parsed_json['main']['temp_max'];
             var wind_speed = parsed_json['wind']['speed'];
             everything = "<img src=\"http://openweathermap.org/img/w/" + weather_icon + ".png\"/>"
-            everything += "<ul>";
+            //everything += "<ul>";
             everything += "<li>Location: " + location;
             everything += "<li>Weather: " + weather + " (" + temp + "&#8457;)";
             everything += "<li>Low: " + temp_min + "&#8457; | High: " + temp_max + "&#8457;";
             everything += "<li>Humidity: " + humidity + "%";
             everything += "<li>Wind: " + wind_speed + " mph";
-            everything += "</ul>";
+           // everything += "</ul>";
             $("#weather").html(everything);
         }
   });
 });
 </script>
 
-<form>
-  Enter A Search Term: <input type="text" id="searchField" value="">
-  <input id="searchButton" type="submit" value="Submit">
-</form>
-<p id="search"> </p>
 <script>
 $(document).ready(function() {
  $("#searchButton").click(function(e){

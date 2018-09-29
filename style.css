@@ -1,4 +1,71 @@
-.weather
+@font-face {
+    font-family: Ostrich;
+    src: url(./ostrich-sans.sans-medium.ttf);
+}
+
+body 
 {
-    background-color: green;
+  background-image: url("washi_@2X.png");
+  background-repeat: repeat;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+h
+{  
+  flex: 0 0 65%;
+   padding: 50px;
+   margin: 0px;
+   text-align: center;
+  font-family: Ostrich; font-size: 56px;
+  font-style: normal; font-variant: normal;
+  font-weight: 300; line-height: 35px; color:black;
+}
+
+form 
+{
+  
+}
+
+a 
+{
+    color: black;
+}
+
+.left-pane
+{
+
+}
+
+.searchButton
+{
+  font-family: Ostrich; font-size: 12px;
+  font-style: normal; font-variant: normal;
+  font-weight: 300; line-height: 35px; color:black;
+
+}
+.txtHint
+{
+  font-family: Ostrich; font-size: 12px;
+  font-style: normal; font-variant: normal;
+  font-weight: 300; line-height: 35px; color:black;
+}
+.weather-panel
+{  
+  font-family: Ostrich; font-size: 24px;
+  font-style: normal; font-variant: normal;
+  font-weight: 300; line-height: 35px; color:black;
+
+}
+
+.search-panel
+{
+  font-family: Ostrich; font-size: 24px;
+  font-style: normal; font-variant: normal;
+  font-weight: 300; line-height: 35px; color:black;
 }
